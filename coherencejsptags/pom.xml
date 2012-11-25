@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.mascix</groupId>
+	<artifactId>coherencejsptags</artifactId>
+	<version>0.0.3</version>
+	<description>oracle coherence jsp tags</description>
+	<developers>
+		<developer>
+			<id>mascix</id>
+			<name>Özkan Pakdil</name>
+			<url>http://mascix.com/</url>
+			<organization>mascix.com</organization>
+			<roles>
+				<role>lead</role>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+	<distributionManagement>
+		<repository>
+			<id>mascix.repo</id>
+			<name>Mascix Repository</name>
+			<url>http://repo.mascix.com/content/repositories/releases/</url>
+		</repository>
+	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>mine</id>
+			<url>http://repo.mascix.com/content/groups/public/</url>
+		</repository>
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.servlet</artifactId>
+			<version>3.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>javax.servlet.jsp</artifactId>
+			<version>2.2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>coherence</artifactId>
+			<version>3.7.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<organization>
+		<name>mascix</name>
+		<url>http://mascix.com</url>
+	</organization>
+	<ciManagement>
+		<system>jenkins</system>
+		<url>http://ci.mascix.com/</url>
+	</ciManagement>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<issueManagement>
+		<url>https://github.com/opakdil/coherencejsptags/issues</url>
+		<system>GitHub Issues</system>
+	</issueManagement>
+</project>

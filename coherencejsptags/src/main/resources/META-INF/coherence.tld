@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>Coherence jsp TLD</short-name>
+	<uri>http://mascix.com/taglibs/coherence</uri>
+	<description>This tag library is part of the mascix.com open source contribution.
+		you can use it for coherence jsp out cache
+	</description>
+	<listener>
+		<listener-class>
+			cache.jsp.CacheContextListener
+		</listener-class>
+	</listener>
+	<tag>
+		<name>cache</name>
+		<tag-class>cache.jsp.CacheTag</tag-class>
+		<body-content>JSP</body-content>
+		<description>
+			The cache tag lets you cache fragments of your JSP pages.
+		</description>
+		<attribute>
+			<name>key</name>
+			<required>no</required>
+			<rtexprvalue>yes</rtexprvalue>
+			<description>
+				The cache key is suffixed to the servlet path to generate a key
+				to access the cached entry. If no key is specified, a number is
+				generated according to the
+				position of the tag in the page.
+			</description>
+		</attribute>
+		<attribute>
+			<name>timeout</name>
+			<required>no</required>
+			<rtexprvalue>no</rtexprvalue>
+			<description>
+				The amount of time in seconds, after which the body of the tag
+				is evaluated and the cache is refreshed. A different unit of time
+				can also be specified by
+				postfixing the timeout value with the
+				desired unit: s= seconds, m= minutes, h= hours, d=days.
+				The default value is "60s".
+			</description>
+		</attribute>
+		<attribute>
+			<name>nocache</name>
+			<required>no</required>
+			<rtexprvalue>yes</rtexprvalue>
+			<description>
+				If set to true, the body content is evaluated and served as if
+				there was no cache tag. This offers a way to programmatically
+				decide whether the cached
+				response should be sent or whether the
+				body has to be evaluated, though the response is not cached.
+				The default value is "false".
+			</description>
+		</attribute>
+		<attribute>
+			<name>refresh</name>
+			<required>no</required>
+			<rtexprvalue>yes</rtexprvalue>
+			<description>
+				If set to true, the body content is evaluated irrespective of
+				the timeout and the response is cached again.
+				The default value is "false".
+			</description>
+		</attribute>
+		<attribute>
+			<name>scope</name>
+			<required>no</required>
+			<rtexprvalue>no</rtexprvalue>
+			<description>
+				Specifies the scope of the cache. Valid values are
+				"request", "session", and "application".
+				The default value is "application".
+			</description>
+		</attribute>
+	</tag>
+	<tag>
+		<name>flush</name>
+		<tag-class>
+			cache.jsp.FlushTag
+		</tag-class>
+		<body-content>empty</body-content>
+		<description>
+			The cache tag lets you flush particular cache entries or the
+			entire cache in a given scope.
+		</description>
+		<attribute>
+			<name>key</name>
+			<required>no</required>
+			<rtexprvalue>yes</rtexprvalue>
+			<description>
+				The cache key is suffixed to the servlet path to generate a key
+				to access the cached entry. If no key is specified, a number is
+				generated according to the
+				position of the tag in the page.
+			</description>
+		</attribute>
+		<attribute>
+			<name>scope</name>
+			<required>no</required>
+			<rtexprvalue>no</rtexprvalue>
+			<description>
+				Specifies the scope of the cache. Valid values are
+				"request", "session", and "application".
+				The default value is "application".
+			</description>
+		</attribute>
+	</tag>
+</taglib>
