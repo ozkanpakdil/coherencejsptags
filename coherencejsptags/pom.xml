@@ -82,4 +82,9 @@
 		<url>https://github.com/opakdil/coherencejsptags/issues</url>
 		<system>GitHub Issues</system>
 	</issueManagement>
+	<scm>
+		<url>https://github.com/ozkanpakdil/coherencejsptags.git</url>
+		<connection>scm:git:git://github.com/ozkanpakdil/coherencejsptags.git</connection>
+		<developerConnection>scm:git:git@github.com:ozkanpakdil/coherencejsptags.git</developerConnection>
+	</scm>
 </project>
