@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mascix</groupId>
 	<artifactId>coherencejsptags</artifactId>
-	<version>0.0.3</version>
+	<version>0.0.4</version>
 	<description>oracle coherence jsp tags</description>
 	<developers>
 		<developer>
